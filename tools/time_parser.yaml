@@ -1,0 +1,30 @@
+identity:
+  name: time_parser
+  author: todd_wu
+  label:
+    en_US: nlp_time_parser
+    zh_Hans: 自然语言时间提取解析器
+    pt_BR: nlp_time_parser
+description:
+  human:
+    en_US: A time parser base on jioNLP, which can extract time information from natural language and parse
+    zh_Hans: 基于jioNLP提取自然语言中的时间信息，并且解析
+    pt_BR: A time parser base on jioNLP, which can extract time information from natural language and parse
+  llm: A time parser base on jioNLP, which can extract time information from natural language and parse
+parameters:
+  - name: time_text
+    type: string
+    required: true
+    label:
+      en_US: Text to parse
+      zh_Hans: 时间文本
+      pt_BR: Text to parse
+    human_description:
+      en_US: The text to parse
+      zh_Hans: 待解析的时间文本
+      pt_BR: The text to parse
+    llm_description: A time parser base on jioNLP
+    form: llm
+extra:
+  python:
+    source: tools/time_parser.py

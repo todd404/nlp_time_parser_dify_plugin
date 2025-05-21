@@ -1,0 +1,17 @@
+identity:
+  author: todd_wu
+  name: time_parser
+  label:
+    en_US: time_parser
+    zh_Hans: time_parser
+    pt_BR: time_parser
+  description:
+    en_US: A time parser base on jioNLP
+    zh_Hans: A time parser base on jioNLP
+    pt_BR: A time parser base on jioNLP
+  icon: icon.svg
+tools:
+  - tools/time_parser.yaml
+extra:
+  python:
+    source: provider/time_parser.py
