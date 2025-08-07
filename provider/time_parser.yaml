@@ -2,13 +2,13 @@ identity:
   author: todd_wu
   name: time_parser
   label:
-    en_US: time_parser
-    zh_Hans: time_parser
-    pt_BR: time_parser
+    en_US: JioNLP Time Parser
+    zh_Hans: JioNLP 时间解析器
+    pt_BR: Analisador de Tempo JioNLP
   description:
-    en_US: A time parser base on jioNLP
-    zh_Hans: A time parser base on jioNLP
-    pt_BR: A time parser base on jioNLP
+    en_US: A tool provider for parsing time from Chinese text based on the jioNLP library.
+    zh_Hans: 基于 jioNLP 库，提供从中文文本中解析时间的工具。
+    pt_BR: Um provedor de ferramentas para analisar o tempo de um texto em chinês com base na biblioteca jioNLP.
   icon: icon.svg
 tools:
   - tools/time_parser.yaml
