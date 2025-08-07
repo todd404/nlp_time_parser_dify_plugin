@@ -2,28 +2,41 @@ identity:
   name: time_parser
   author: todd_wu
   label:
-    en_US: nlp_time_parser
-    zh_Hans: 自然语言时间提取解析器
-    pt_BR: nlp_time_parser
+    en_US: Parse Time from Chinese Text
+    zh_Hans: 中文自然语言时间提取解析器
+    pt_BR: Analisar Tempo de Texto em Chinês
 description:
   human:
-    en_US: A time parser base on jioNLP, which can extract time information from natural language and parse
-    zh_Hans: 基于jioNLP提取自然语言中的时间信息，并且解析
-    pt_BR: A time parser base on jioNLP, which can extract time information from natural language and parse
-  llm: A time parser base on jioNLP, which can extract time information from natural language and parse
+    en_US: Extracts and parses time expressions from Chinese natural language text based on jioNLP.
+    zh_Hans: 基于jioNLP提取中文自然语言中的时间信息，并且解析
+    pt_BR: Extrai e analisa expressões de tempo de texto em linguagem natural chinesa com base no jioNLP.
+  llm: This tool is used to extract and parse various time-related expressions from a given Chinese text. It can handle expressions like '明天上午8点' (tomorrow at 8 am), '下周三' (next Wednesday), '3天后' (in 3 days), and specific dates. It returns structured time information, including start and end timestamps.
 parameters:
   - name: time_text
     type: string
     required: true
     label:
-      en_US: Text to parse
-      zh_Hans: 时间文本
-      pt_BR: Text to parse
+      en_US: Text to Parse
+      zh_Hans: 待解析的文本
+      pt_BR: Texto para Analisar
     human_description:
-      en_US: The text to parse
-      zh_Hans: 待解析的时间文本
-      pt_BR: The text to parse
-    llm_description: A time parser base on jioNLP
+      en_US: The Chinese text containing time expressions to be parsed.
+      zh_Hans: 待解析的包含时间的文本
+      pt_BR: O texto em chinês contendo expressões de tempo a serem analisadas.
+    llm_description: The Chinese text that contains time-related expressions. For example, '我明天下午要去开会'.
+    form: llm
+  - name: base_time_text
+    type: string
+    required: false
+    label:
+      en_US: Time base text
+      zh_Hans: 时间基准
+      pt_BR: Texto de base de tempo
+    human_description:
+      en_US: Optional. A reference time for parsing relative expressions like 'tomorrow'. Format 'YYYY-MM-DD HH:MM:SS'. Defaults to the current time if not provided.
+      zh_Hans: 可选。用于解析“明天”等相对时间表达式的参考时间。格式为“YYYY-MM-DD HH:MM:SS”。如果未提供，则默认为当前时间。
+      pt_BR: Opcional. Um tempo de referência para analisar expressões relativas como 'amanhã'. Formato 'YYYY-MM-DD HH:MM:SS'. O padrão é a hora atual se não for fornecido.
+    llm_description: An optional reference time in 'YYYY-MM-DD HH:MM:SS' format for parsing relative time expressions. If omitted, the current system time is used as the base.
     form: llm
 extra:
   python:
